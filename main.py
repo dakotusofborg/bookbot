@@ -1,4 +1,4 @@
-from stats import count_words
+from stats import count_words, count_characters
 
 def main():
     # Read the book file
@@ -9,6 +9,10 @@ def main():
 
     # Print exactly what the test expects
     print(f"{num_words} words found in the document")
+
+    # character count 
+    char_counts = count_characters(text)
+    print(char_counts)
 
 
 if __name__ == "__main__":
