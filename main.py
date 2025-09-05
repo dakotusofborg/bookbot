@@ -1,10 +1,16 @@
-def get_book_text(filepath):
-    with open(filepath, "r", encoding="utf=8") as f:
-        return f.read()
+from stats import count_words
 
-def main(): 
-    text = get_book_text("books/frankenstein.txt")
-    print(text)
+def main():
+    # Read the book file
+    with open("books/frankenstein.txt", "r", encoding="utf-8") as file:
+        text = file.read()
 
-if __name__ == "__main__": 
+    num_words = count_words(text)
+
+    # Print exactly what the test expects
+    print(f"{num_words} words found in the document")
+
+
+if __name__ == "__main__":
     main()
+
